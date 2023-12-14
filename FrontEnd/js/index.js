@@ -267,4 +267,3 @@ displayLogout.addEventListener("click",() =>{
   // redirect to offline homepage
   window.location.href = "/FrontEnd/index.html";
 });
- 
