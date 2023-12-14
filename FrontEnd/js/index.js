@@ -97,25 +97,29 @@ function createFilters(tableauFilter){
   select.innerHTML="";
   // On utilise une boucle forEach pour parcourir chaque élément du tableau "tableauFilter".
   tableauFilter.forEach(element => {
-  // On affiche chaque élément du tableau dans la console.
-  console.log(element)
-  // On appelle une fonction appelée "createFilter" avec l'élément actuel en tant qu'argument. Le résultat de cette fonction est stocké dans une variable appelée "filter".
-  const filter = createFilter(element);
-  // On ajoute l'élément "filter" en tant qu'enfant de l'élément "filters". Cela placera l'élément "filter" à l'intérieur de l'élément "filters".
-  filters.appendChild(filter);
+    // On affiche chaque élément du tableau dans la console.
+    console.log(element)
+    // On appelle une fonction appelée "createFilter" avec l'élément actuel en tant qu'argument. Le résultat de cette fonction est stocké dans une variable appelée "filter".
+    const filter = createFilter(element);
+    // On ajoute l'élément "filter" en tant qu'enfant de l'élément "filters". Cela placera l'élément "filter" à l'intérieur de l'élément "filters".
+    filters.appendChild(filter);
 
-  // Ajoutez un console.log pour vérification ou débogage, par exemple :
-  console.log("Élément ajouté aux filtres : " + element.name);
+    // Ajoutez un console.log pour vérification ou débogage, par exemple :
+    console.log("Élément ajouté aux filtres : " + element.name);
 
-  if(element.id!=0){
-  // On appelle une fonction appelée "createslectCategorie" avec l'élément actuel en tant qu'argument. Le résultat de cette fonction est stocké dans une variable appelée "option".
-  const option = createOption(element);
-  // On ajoute l'élément "option" en tant qu'enfant de l'élément "select".
-  select.appendChild(option);
+    if(element.id!=0){
+      // On appelle une fonction appelée "createslectCategorie" avec l'élément actuel en tant qu'argument. Le résultat de cette fonction est stocké dans une variable appelée "option".
+      const option = createOption(element);
+      // On ajoute l'élément "option" en tant qu'enfant de l'élément "select".
+      select.appendChild(option);
 
-  // Ajoutez un console.log pour vérification ou débogage, par exemple :
-      console.log("Option de catégorie ajoutée : " + element.name);
-}
+      // Ajoutez un console.log pour vérification ou débogage, par exemple :
+          console.log("Option de catégorie ajoutée : " + element.name);
+    }
+
+    const filterAll = document.querySelector(".filters div")
+    console.log(filterAll)
+    filterAll.classList.add("couleur-inversee")
   });
 }
 
