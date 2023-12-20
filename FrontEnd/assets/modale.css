@@ -25,7 +25,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 500px; /* Ajustez selon vos besoins */
-    max-height: 85vh; /* Ajustez selon vos besoins */
+    max-height: 90vh; /* Ajustez selon vos besoins */
     overflow-y: hidden;
     padding: 30px; /* Ajustez selon vos besoins */
     background: #FFFFFF;
