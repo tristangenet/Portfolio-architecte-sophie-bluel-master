@@ -109,8 +109,20 @@ addPhotoButton.addEventListener("click", function () {
 
 // Fonction pour fermer la deuxième modal
 function closeSecondModal() {
+  resetForm(); // Réinitialiser le formulaire
   modalAddProject.style.display = "none";
   firstModal.style.display = "flex"; // Réafficher la première modal
+}
+
+function resetForm() {
+  // Réinitialiser le champ de titre
+  titleInput.value = "";
+
+  // Réinitialiser l'aperçu de l'image
+  removeImage();
+  
+  // Réinitialiser le champ de fichier (input type=file)
+  document.getElementById("photo-input").value = "";
 }
 
 // Récupération de l'élément de retour à la première modal
